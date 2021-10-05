@@ -26,11 +26,11 @@ We will test the patterson’s worm code by running specific rulesets provided i
 
 For Ruleset (0,4,2,3), the ending worm should look like this: 
 
-<img src="pics/rule_0423.JPG" width="200" height="200" />
+<img src="pics/rule_0423.JPG" width="200" height="240" />
 
 For further validation, this table presents various ending lengths and node counts for various rulesets:
 
-<img src="pics/table.JPG" width="200" height="200" />
+<img src="pics/table.JPG" width="400" height="800" />
 
 
 # Result Interpretation
