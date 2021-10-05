@@ -11,17 +11,22 @@ We plan to investigate the patterns and behaviors of Paterson’s Worms by re-wr
 The first thing we would like to replicate from these papers would be the original Paterson’s worms on a triangular grid. This includes some form of animation to better study and visualize the behavior of different worms. In addition to this, we can use various parameters, such as node number visited and path length to validate the behavior to that of the paper. 
 
 As an extension, we will implement a UI to better interact with the creation and observation of worms. Beyond this, we want to implement an 3D version of langston’s worm, with nodes at the vertices of a hexagonal prism tesselation of 3D space such as:
-*PLACE image here of honey combs*
-The worm will now have 8 possible directions to move, having the same 6 hexagonal directions, and moving up and down a plane:
-*insert behavior pic here*
+<img src="pics/hex_2.JPG" width="200" height="200" />
+<img src="pics/hex_3.JPG" width="200" height="200" />
 
+The worm will now have 8 possible directions to move, having the same 6 hexagonal directions, and moving up and down a plane:
+<img src="pics/hex_1.JPG" width="200" height="200" />
 
 # Experimental Results
-We will test the patterson’s worm code by running specific rulesets provided in the paper and checking that various different configurations match:
+We will test the patterson’s worm code by running specific rulesets provided in the paper and checking that various different configurations match
+
 
 For Ruleset (0,4,2,3), the ending worm should look like this: 
 
+<img src="pics/rule_0423.JPG" width="200" height="200" />
+
 For further validation, this table presents various ending lengths and node counts for various rulesets:
+<img src="pics/table.JPG" width="200" height="200" />
 
 
 # Result Interpretation
