@@ -10,7 +10,7 @@ We plan to investigate the patterns and behaviors of a cellular automata: Paters
 # Paterson's Worms
 Paterson’s worms are a type of cellular automata that are often mentioned along with Turing machines, Langston’s Ant and turmites. This cellular automata seeks to capture the idea of an agent that has the ability of moving in 2-d beyond the cardinal directions, attempting to capture the idea of “soft” and “hard” turns, for the purpose of travelling through a triangular grid from node to node where each has six possible neighbors.
 
-<img src="pics/triang_grid.JPG" width="200" height="200" />
+<img src="pics/triang_grid.png" width="200" height="200" />
 
 The worm’s next move is dependent on the direction of the last movement it has made and the state of the edges (previously travelled paths) of the node it has moved from. 
 
@@ -18,14 +18,14 @@ The worm’s next move is dependent on the direction of the last movement it has
 
 In the image above we have an example of the original encoding of Paterson’s worms. The entire ruleset is encoded relative to the worm’s previous move being to the left direction (we encode that as direction with an output edge of 5.) For all other cases where the input edge is not five, the ruleset is accordingly adjusted as to produce the correct output relative to that direction. This is done by “rotating” the ruleset, such that we treat the output is generated relative to the input direction.
 
-<img src="pics/ROT_RULES_CORRECT.JPG" width="200" height="200" />
+<img src="pics/ROT_RULES_CORRECT.png" width="200" height="200" />
 
 # Experiments
 The first stage of our experiment was to replicate the original Paterson’s Worms in python. We used NetworkX to create the triangular graph as described in the original paper. Though we experimented with other graphing methods, NetworkX’s built in triangular grid had all the features we needed to implement our worm behavior such as row-column indexing, the adding of edges, and being able to create an unconnected graph with pre-defined node positions. 
 
 Once we had the foundation of our worm graphing, we were able to start working on reconstructing Paterson's worms ruleset by adapting the original rules, as mentioned in the previous section, to Networkx constraints. This stage involved more manual encoding rather than an algorithmic approach. We studied the encoding of the original paper which consisted of a few pages of diagrams listing the different possible behaviors of the worm once it arrived at a distinct node. However the diagram only showed the encoding for one direction (to the left or our ‘5’) thus we had to implement a way to ‘rotate’ the ruleset such that it could be applied in any direction. 
 
-<img src="pics/ENCODE.JPG" width="200" height="200" />
+<img src="pics/ENCODE.png" width="200" height="200" />
 
 Now, once the worm (agent) knows which direction to move based on the encoding it will move from one node to another by drawing an edge. This is the current experiment stage, results will be seen in the next section.
 Finally, our next step for this project will be moving on to the extensions. In the first we will be counting the lengths of the worms and analyzing them to see if they form a heavy-tailed distribution. As for the latter we will attempt to implement a modified box counting algorithm to see if some of the worms are actually fractals.
