@@ -10,11 +10,11 @@ We plan to investigate the patterns and behaviors of a cellular automata: Paters
 # Paterson's Worms
 Paterson’s worms are a type of cellular automata that are often mentioned along with Turing machines, Langston’s Ant and turmites. This cellular automata seeks to capture the idea of an agent that has the ability of moving in 2-d beyond the cardinal directions, attempting to capture the idea of “soft” and “hard” turns, for the purpose of travelling through a triangular grid from node to node where each has six possible neighbors.
 
-<img src="pics/triang_grid.png" width="200" height="200" />
+<img src="pics/triang_grid.png" width="400" height="400" />
 
 The worm’s next move is dependent on the direction of the last movement it has made and the state of the edges (previously travelled paths) of the node it has moved from. 
 
-<img src="pics/ruleset.JPG" width="400" height="800" />
+<img src="pics/ruleset.JPG" width="800" height="1000" />
 
 In the image above we have an example of the original encoding of Paterson’s worms. The entire ruleset is encoded relative to the worm’s previous move being to the left direction (we encode that as direction with an output edge of 5.) For all other cases where the input edge is not five, the ruleset is accordingly adjusted as to produce the correct output relative to that direction. This is done by “rotating” the ruleset, such that we treat the output is generated relative to the input direction.
 
