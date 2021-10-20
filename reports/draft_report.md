@@ -25,7 +25,7 @@ The first stage of our experiment was to replicate the original Paterson’s Wor
 
 Once we had the foundation of our worm graphing, we were able to start working on reconstructing Paterson's worms ruleset by adapting the original rules, as mentioned in the previous section, to Networkx constraints. This stage involved more manual encoding rather than an algorithmic approach. We studied the encoding of the original paper which consisted of a few pages of diagrams listing the different possible behaviors of the worm once it arrived at a distinct node. However the diagram only showed the encoding for one direction (to the left or our ‘5’) thus we had to implement a way to ‘rotate’ the ruleset such that it could be applied in any direction. 
 
-<img src="pics/ENCODE.png" width="1000" height="800" />
+<img src="pics/ENCODE.png" width="1000" height="700" />
 
 Now, once the worm (agent) knows which direction to move based on the encoding it will move from one node to another by drawing an edge. This is the current experiment stage, results will be seen in the next section.
 Finally, our next step for this project will be moving on to the extensions. In the first we will be counting the lengths of the worms and analyzing them to see if they form a heavy-tailed distribution. As for the latter we will attempt to implement a modified box counting algorithm to see if some of the worms are actually fractals.
@@ -40,25 +40,26 @@ For Ruleset 0423 which in the version of our encoding would be (1,1,2,0,2,0,0), 
 <img src="pics/rule_0423.JPG" width="200" height="240" />
 
 Our Version: 
+
 <img src="pics/PAPER_WORM_1120200.JPG" width="200" height="240" />
 
 Some other interesting worms we found: 
 
 "Ribbon" (0,3,2,1,2,2,0):
 
-<img src="pics/ribbon_0321220.JPG" width="200" height="240" />
+<img src="pics/ribbon_0321220.JPG" width="400" height="240" />
 
 "Splatter" (0,2,0,2,0,1,0):
 
-<img src="pics/splatter_0202010.JPG" width="200" height="240" />
+<img src="pics/splatter_0202010.JPG" width="400" height="440" />
 
 "Sword" (0,3,1,1,0,2,0):
 
-<img src="pics/PAPER_WORM_1120200.JPG" width="200" height="240" />
+<img src="pics/sword_0311020.JPG" width="400" height="440" />
 
 "Flower" (0,0,2,1,1,2,0):
 
-<img src="pics/PAPER_WORM_1120200.JPG" width="200" height="240" />
+<img src="pics/flower_0021120.JPG" width="400" height="440" />
 
 
 
