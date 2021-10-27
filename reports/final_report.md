@@ -109,7 +109,7 @@ Though this slice of the nearly 300 worms missing does not tell us much conclusi
 One of the methods of analysis for the worms in the paper is calculating the coefficient of *path length/number of nodes visited*. This coefficient seems to grow as the length of the worm (and somewhat the number of generations the worm lives). We can use this to further analyze how certain general types of rulesets function.
 
 # Code
-https://github.com/SamCabV/pattersons_worms_sandbox_complexity/blob/main/reports/final_report.md
+https://colab.research.google.com/drive/13pHXpShb0ciBVb5qVBklQwl2_ditGC5m?usp=sharing
 
 # Next Steps
 
