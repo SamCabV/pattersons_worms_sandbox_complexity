@@ -20,25 +20,28 @@ In the image above we have an example of the original encoding of Paterson’s w
 
 <img src="pics/ROT_RULES_CORRECT.png" width="400" height="400" />
 
+*Figure 1. A diagram of an example worm input/ruleset/output behavior.*
+
+
 # Experiment Methodology
 Paterson’s Worms requires a triangular grid as seen below, in order to create ‘hard’ and ‘soft’ turns for the worm-agent to travel through. NetworkX has a built-in triangular grid graph which is perfect for simulating the head and body of the worm in space by adding edges to the graph that represent segments of the worm.
 
 <img src="pics/triang_grid.png" width="400" height="400" />
 
-*Figure 1. Triangular grid that Paterson’s worm travels through, replicated by a triangular grid NetworkX graph in this experiment.*
+*Figure 2. Triangular grid that Paterson’s worm travels through, replicated by a triangular grid NetworkX graph in this experiment.*
 
 The worm itself behaves according to a directionally influenced ruleset, an example of which from the original paper by Beeler is provided below. The original paper only gives the ruleset for the worm moving horizontally to the left and what is not explicitly given in the paper is that this ruleset is rotated for the current direction the worm is approaching a new node from. Thus we implemented this rotation by manually encoding a ‘rotation’ of a left facing ruleset to match the incoming direction of the worm. 
 
 <img src="pics/ruleset.JPG" width="800" height="1000" />
 
-*Figure 2. Paterson’s Worms ruleset from source 1 for the left direction.*
+*Figure 3. Paterson’s Worms ruleset from source 1 for the left direction.*
 
 
 Below is an example of the manual encoding process of the worm. For context, we assigned each of the six possible neighbors of a node a direction number from 0 to 5 with 0 being the top left neighbor and the numbers increasing clockwise.
 
 <img src="pics/ENCODE.png" width="1000" height="700" />
 
-*Figure 3. Implemented ruleset rotation process.*
+*Figure 4. Implemented ruleset rotation process.*
 
 With a ruleset that can be applied in any of the six directions, the worm is able to traverse from one node on the NetworkX graph to another by drawing an edge. When a worm is displayed using the default NetworkX drawing settings after a predetermined number of steps or its end state it comes out in a black and white grid that only shows the final pattern of the worm. While the general emergent pattern of the worm can be seen in this state, how the worm created the pattern is much less apparent. Thus we briefly explored the visualization of worms and implemented an animation method as well as a coloring of the worm that colors ‘older’ segments of the worm darker and nodes with more neighbors darker as well.
 
@@ -75,11 +78,18 @@ To analyze the worm length, we calculated every possible worm combination in an 
 
 <img src="pics/Worm_length.png" width="600" height="440" />
 
+*Figure 5. Plot the worm lengths over the corresponding encoding numbers, x-ticks removed for clarity.*
+
 To further look at this truncated data we also plotted the pmf of worm lenghts on both a regular and log-log axis: 
 
 <img src="pics/PMF.png" width="600" height="440" />
 
+*Figure 6. PMF plot of worm lengths.*
+
+
 <img src="pics/PMF_loglog.png" width="600" height="440" />
+
+*Figure 7. PMF plot of worm lenths in log-log axis.*
 
 
 
