@@ -92,7 +92,7 @@ Further studying the pmf graphs we run into this issue again, but this time the 
 
 Despite our inability to further calculate longer worms, others have been able to look into a few of the known finite worms of higher magnitude lengths, this chart from [Wolfram](https://mathworld.wolfram.com/PatersonsWorms.html) shows a few of them:
 
-<img src="pics/wolfram.JPG" width="400" height="250" />
+<img src="pics/wolfram.JPG" width="300" height="450" />
 
 Though this slice of the nearly 300 worms missing does not tell us much conclusively about the distribution being heavy-tailed, it does demonstrate the large range of magnitude the worm lengths can be. This is encouraging to the possibility of the distribution being long-tailed as these tail points have such variable orders of magnitude.
 
