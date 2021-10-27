@@ -70,7 +70,7 @@ Some other interesting worms we found:
 
 To analyze the worm length, we calculated every possible worm combination in an 1000x1000 grid, running for 2000 steps. Though there are worms several orders of magnitude larger than the max possible length of 2000 in this configuration, we were not able to further compute larger worms without crashing the program. This is due to a combination of inefficiencies in the code, access to hardware, and the speed of the python language. 
 
-<img src="pics/Worm_length.png" width="500" height="440" />
+<img src="pics/Worm_length.png" width="600" height="440" />
 
 To further look at this truncated data we also plotted the pmf of worm lenghts on both a regular and log-log axis: 
 
