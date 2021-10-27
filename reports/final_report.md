@@ -51,22 +51,22 @@ For Ruleset 0423 which in the version of our encoding would be (1,1,2,0,2,0,0), 
 
 Our Version: 
 
-<img src="pics/paper_worm_anim.GIF" width="200" height="240" />
+<img src="pics/paper_worm_anim.gif" width="200" height="240" />
 
 Some other interesting worms we found: 
 
 
 "Spiral" (0,2,0,2,0,1,0):
 
-<img src="pics/Spiral.GIF" width="400" height="440" />
+<img src="pics/Spiral.gif" width="400" height="440" />
 
 "Sword" (0,3,1,1,0,2,0):
 
-<img src="pics/sword_anim.GIF" width="400" height="440" />
+<img src="pics/sword_anim.gif" width="400" height="440" />
 
 "Flower" (0,0,2,1,1,2,0):
 
-<img src="pics/flower_animation.GIF" width="400" height="440" />
+<img src="pics/flower_animation.gif" width="400" height="440" />
 
 To analyze the worm length, we calculated every possible worm combination in an 1000x1000 grid, running for 2000 steps. Though there are worms several orders of magnitude larger than the max possible length of 2000 in this configuration, we were not able to further compute larger worms without crashing the program. This is due to a combination of inefficiencies in the code, access to hardware, and the speed of the python language. 
 
@@ -92,7 +92,7 @@ Further studying the pmf graphs we run into this issue again, but this time the 
 
 Despite our inability to further calculate longer worms, others have been able to look into a few of the known finite worms of higher magnitude lengths, this chart from [Wolfram](https://mathworld.wolfram.com/PatersonsWorms.html) shows a few of them:
 
-<img src="pics/wolfram.jpg" width="400" height="440" />
+<img src="pics/wolfram.JPG" width="400" height="440" />
 
 Though this slice of the nearly 300 worms missing does not tell us much conclusively about the distribution being heavy-tailed, it does demonstrate the large range of magnitude the worm lengths can be. This is encouraging to the possibility of the distribution being long-tailed as these tail points have such variable orders of magnitude.
 
