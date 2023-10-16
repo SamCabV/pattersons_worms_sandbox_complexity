@@ -15,7 +15,7 @@ Research on Paterson’s Worms has largely declined due to the need for more pro
 
 In the image above we have an example of the original encoding of Paterson’s worms. The entire ruleset is encoded relative to the worm’s previous move being to the left direction (we encode that as direction with an output edge of 5.) For all other cases where the input edge is not five, the ruleset is accordingly adjusted as to produce the correct output relative to that direction. This is done by “rotating” the ruleset, such that we treat the output is generated relative to the input direction.
 
-<img src="pics/ROT_RULES_CORRECT.png" width="400" height="400" />
+<img src="reports/pics/ROT_RULES_CORRECT.png" width="400" height="400" />
 
 *Figure 1. A diagram of an example worm input/ruleset/output behavior.*
 
@@ -23,20 +23,20 @@ In the image above we have an example of the original encoding of Paterson’s w
 # Experiment Methodology
 Paterson’s Worms requires a triangular grid as seen below, in order to create ‘hard’ and ‘soft’ turns for the worm-agent to travel through. NetworkX has a built-in triangular grid graph which is perfect for simulating the head and body of the worm in space by adding edges to the graph that represent segments of the worm.
 
-<img src="pics/triang_grid.png" width="400" height="400" />
+<img src="reports/pics/triang_grid.png" width="400" height="400" />
 
 *Figure 2. Triangular grid that Paterson’s worm travels through, replicated by a triangular grid NetworkX graph in this experiment.*
 
 The worm itself behaves according to a directionally influenced ruleset, an example of which from the original paper by Beeler is provided below. The original paper only gives the ruleset for the worm moving horizontally to the left and what is not explicitly given in the paper is that this ruleset is rotated for the current direction the worm is approaching a new node from. Thus we implemented this rotation by manually encoding a ‘rotation’ of a left facing ruleset to match the incoming direction of the worm. 
 
-<img src="pics/ruleset.JPG" width="800" height="1000" />
+<img src="reports/pics/ruleset.JPG" width="800" height="1000" />
 
 *Figure 3. Paterson’s Worms ruleset from source 1 for the left direction.*
 
 
 Below is an example of the manual encoding process of the worm. For context, we assigned each of the six possible neighbors of a node a direction number from 0 to 5 with 0 being the top left neighbor and the numbers increasing clockwise.
 
-<img src="pics/ENCODE.png" width="1000" height="700" />
+<img src="reports/pics/ENCODE.png" width="1000" height="700" />
 
 *Figure 4. Implemented ruleset rotation process.*
 
@@ -50,41 +50,41 @@ To test if our implementation of Paterson’s worms works the same as the origin
 For Ruleset 0423 which in the version of our encoding would be (1,1,2,0,2,0,0), the ending worm should look like this: 
 
 
-<img src="pics/rule_0423.JPG" width="200" height="240" />
+<img src="reports/pics/rule_0423.JPG" width="200" height="240" />
 
 Our Version: 
 
-<img src="pics/paper_worm_anim.gif" width="210" height="240" />
+<img src="reports/pics/paper_worm_anim.gif" width="210" height="240" />
 
 Some other interesting worms we found: 
 
 
 "Spiral" (0,2,0,2,0,1,0):
 
-<img src="pics/Spiral.gif" width="400" height="440" />
+<img src="reports/pics/Spiral.gif" width="400" height="440" />
 
 "Sword" (0,3,1,1,0,2,0):
 
-<img src="pics/sword_anim.gif" width="400" height="440" />
+<img src="reports/pics/sword_anim.gif" width="400" height="440" />
 
 "Flower" (0,0,2,1,1,2,0):
 
-<img src="pics/flower_animation.gif" width="400" height="440" />
+<img src="reports/pics/flower_animation.gif" width="400" height="440" />
 
 To analyze the worm length, we calculated every possible worm combination in an 1000x1000 grid, running for 2000 steps. Though there are worms several orders of magnitude larger than the max possible length of 2000 in this configuration, we were not able to further compute larger worms without crashing the program. This is due to a combination of inefficiencies in the code, access to hardware, and the speed of the python language. 
 
-<img src="pics/Worm_length.png" width="600" height="440" />
+<img src="reports/pics/Worm_length.png" width="600" height="440" />
 
 *Figure 5. Plot the worm lengths over the corresponding encoding numbers, x-ticks removed for clarity.*
 
 To further look at this truncated data we also plotted the pmf of worm lenghts on both a regular and log-log axis: 
 
-<img src="pics/PMF.png" width="600" height="440" />
+<img src="reports/pics/PMF.png" width="600" height="440" />
 
 *Figure 6. PMF plot of worm lengths.*
 
 
-<img src="pics/PMF_loglog.png" width="600" height="440" />
+<img src="reports/pics/PMF_loglog.png" width="600" height="440" />
 
 *Figure 7. PMF plot of worm lenths in log-log axis.*
 
@@ -102,7 +102,7 @@ Further studying the pmf graphs we run into this issue again, but this time the 
 
 Despite our inability to further calculate longer worms, others have been able to look into a few of the known finite worms of higher magnitude lengths, this chart from [Wolfram](https://mathworld.wolfram.com/PatersonsWorms.html) shows a few of them:
 
-<img src="pics/wolfram.JPG" width="300" height="450" />
+<img src="reports/pics/wolfram.JPG" width="300" height="450" />
 
 Though this slice of the nearly 300 worms missing does not tell us much conclusively about the distribution being heavy-tailed, it does demonstrate the large range of magnitude the worm lengths can be. This is encouraging to the possibility of the distribution being long-tailed as these tail points have such variable orders of magnitude.
 
